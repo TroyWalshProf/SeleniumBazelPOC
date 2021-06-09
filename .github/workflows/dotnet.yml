@@ -17,8 +17,8 @@ jobs:
     steps:
       - name: Checkout source tree
         uses: actions/checkout@v2
-      - name: Setup bazelisk
-        uses: ./.github/actions/setup-bazelisk
+      #- name: Setup bazelisk
+      #  uses: ./.github/actions/setup-bazelisk
       - name: Setup Java
         uses: actions/setup-java@v1
         with:
@@ -26,7 +26,7 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.5
-      - uses: ./.github/actions/setup-bazelisk
+      #- uses: ./.github/actions/setup-bazelisk
           
       - name: Build grid
         uses: ./.github/actions/bazel
