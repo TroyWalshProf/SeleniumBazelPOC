@@ -1,4 +1,4 @@
-name: Java workflow
+name: Dotnet workflow
 
 on:
   push:
