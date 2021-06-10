@@ -100,13 +100,6 @@ load("@rules_jvm_external//:setup.bzl", "rules_jvm_external_setup")
 
 rules_jvm_external_setup()
 
-load("//java:maven_deps.bzl", "selenium_java_deps")
-
-selenium_java_deps()
-
-load("@maven//:defs.bzl", "pinned_maven_install")
-
-pinned_maven_install()
 
 http_archive(
     name = "d2l_rules_csharp",
