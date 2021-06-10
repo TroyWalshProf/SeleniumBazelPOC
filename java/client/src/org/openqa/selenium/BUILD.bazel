@@ -85,16 +85,6 @@ javadoc(
     ],
 )
 
-java_import(
-    name = "manifest",
-    jars = [
-        ":manifest-entries",
-        ":manifest-jar",
-    ],
-    visibility = [
-      "//java/server/src/org/openqa/selenium/grid:__pkg__",
-    ]
-)
 
 genrule(
     name = "manifest-jar",
