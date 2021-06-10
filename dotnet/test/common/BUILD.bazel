@@ -45,8 +45,6 @@ config_setting(
     data = [
         "appconfig.json",
         "//common/src/web",
-        "//java/client/test/org/openqa/selenium/environment:appserver_deploy.jar",
-        "//java/client/test/org/openqa/selenium/environment:keystore",
         "//javascript/atoms",
         "//third_party/closure/goog",
         "//third_party/js/selenium:webdriver_json",
