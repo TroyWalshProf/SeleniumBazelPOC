@@ -33,3 +33,6 @@ jobs:
         with:
           command: build -s //dotnet/src/webdriver:netstandard2.0
           #command: build //dotnet/source/common:chrome
+          
+      - run: Get-ChildItem -Path bazel-bin/dotnet/src/webdriver/bazelout/netstandard2.0/
+        shell: pwsh 
