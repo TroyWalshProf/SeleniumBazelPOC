@@ -31,7 +31,7 @@ jobs:
       - name: Build grid
         uses: ./.github/actions/bazel
         with:
-          command: build -s //dotnet/src/webdriver
+          command: build -s //dotnet/src/webdriver:nuget_package
           #command: build -s //dotnet/src/webdriver:netstandard2.0
           #command: build //dotnet/source/common:chrome
           
