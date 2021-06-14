@@ -35,5 +35,12 @@ jobs:
           #command: build -s //dotnet/src/webdriver:netstandard2.0
           #command: build //dotnet/source/common:chrome
           
-      - run: Get-ChildItem -Path bazel-bin/dotnet/src/webdriver/bazelout/netstandard2.0/
+      - run: Get-ChildItem -Path bazel-bin/dotnet/src/webdriver/
         shell: pwsh 
+        
+      - uses: actions/upload-artifact@v2
+        name: "Upload artifacts"
+        with:
+          name: nuget
+          path: |
+            bazel-bin/dotnet/src/webdriver/*.*
