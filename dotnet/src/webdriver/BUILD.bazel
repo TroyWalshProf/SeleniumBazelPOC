@@ -234,7 +234,7 @@ genrule(
         $$ns.AddNamespace("ns", $$xml.DocumentElement.NamespaceURI)
         $$element =  $$xml.DocumentElement.SelectSingleNode("//ns:repository", $$ns)
         $$element.commit = (git rev-parse HEAD).ToString()
-        $$xml.Save($$filePathToTask)
+        #$$xml.Save($$filePathToTask)
         get-content $$path
         """,
 )
