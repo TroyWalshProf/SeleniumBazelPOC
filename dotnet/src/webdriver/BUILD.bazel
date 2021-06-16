@@ -222,10 +222,19 @@ copy_file(
     out = "icon.png",
 )
 
+
 genrule(
     name = "commitver",
     outs = ["out.txt"],
-    cmd_ps = """(
+    cmd_ps = """
+        Write-Host "TEST"
+        """,
+)
+
+genrule(
+    name = "commitver2",
+    outs = ["out.txt"],
+    cmd_ps = """
         $$path = Get-Location
         $$filePathToTask = Join-Path -Path $$path -ChildPath  "WebDriver.nuspec"
         $$xml = New-Object XML
@@ -252,6 +261,7 @@ nuget_package(
     visibility = ["//visibility:public"],
     deps = [ 
         ":commitver",   
+        ":commitver2", 
         ":logo",
         ":net45",
         ":net46",
