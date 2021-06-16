@@ -4,6 +4,7 @@ load(
     "//dotnet:selenium-dotnet-version.bzl",
     "SUPPORTED_NET_FRAMEWORKS",
     "SUPPORTED_NET_STANDARD_VERSIONS",
+    "subprocess",
 )
 
 def _nuget_push_impl(ctx):
@@ -82,8 +83,6 @@ def _nuget_package_impl(ctx):
     args = [
         "pack",
     ]
-    
-    import subprocess
 
     process = subprocess.Popen(['git', 'rev-parse', 'HEAD'], shell=False, stdout=subprocess.PIPE)
     git_head_hash = process.communicate()[0].strip()
