@@ -226,15 +226,15 @@ genrule(
     name = "commitver",
     outs = ["WebDriver.nuspec"],
     cmd_ps = """(
-        $path = Get-Location
-        $filePathToTask = Join-Path -Path $path -ChildPath  "WebDriver.nuspec"
-        $xml = New-Object XML
-        $xml.Load($filePathToTask)
-        $ns = New-Object System.Xml.XmlNamespaceManager($xml.NameTable)
-        $ns.AddNamespace("ns", $xml.DocumentElement.NamespaceURI)
-        $element =  $xml.DocumentElement.SelectSingleNode("//ns:repository", $ns)
-        $element.commit = (git rev-parse HEAD).ToString()
-        $xml.Save($filePathToTask)
+        $$path = Get-Location
+        $$filePathToTask = Join-Path -Path $$path -ChildPath  "WebDriver.nuspec"
+        $$xml = New-Object XML
+        $$xml.Load($$filePathToTask)
+        $$ns = New-Object System.Xml.XmlNamespaceManager($$xml.NameTable)
+        $$ns.AddNamespace("ns", $$xml.DocumentElement.NamespaceURI)
+        $$element =  $$xml.DocumentElement.SelectSingleNode("//ns:repository", $$ns)
+        $$element.commit = (git rev-parse HEAD).ToString()
+        $$xml.Save($$filePathToTask)
         """,
 )
 
