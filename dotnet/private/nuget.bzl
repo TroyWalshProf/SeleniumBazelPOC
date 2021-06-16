@@ -121,7 +121,7 @@ def _nuget_package_impl(ctx):
     git_head_hash = "123"
     ctx.actions.run(
         executable = ctx.executable.nuget_exe,
-        progress_message = "Packaging {}".format(git_head_hash),
+        progress_message = "Packaging {}".format("123"),
         arguments = args,
         inputs = ctx.attr.src.files.to_list() + ctx.files.deps,
         outputs = output_files,
