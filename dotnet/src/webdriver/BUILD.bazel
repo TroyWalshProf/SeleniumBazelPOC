@@ -224,6 +224,7 @@ copy_file(
 
 genrule(
     name = "commitver",
+    outs = ["WebDriver.nuspec"],
     cmd_ps = """(
         $path = Get-Location
         $filePathToTask = Join-Path -Path $path -ChildPath  "WebDriver.nuspec"
