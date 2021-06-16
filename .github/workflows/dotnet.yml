@@ -39,6 +39,14 @@ jobs:
         shell: pwsh 
         
       - uses: actions/upload-artifact@v2
+        if: always()
+        name: "Upload code"
+        with:
+          name: code
+          path: |
+            dotnet/src/webdriver/*.*
+        
+      - uses: actions/upload-artifact@v2
         name: "Upload artifacts"
         with:
           name: nuget
