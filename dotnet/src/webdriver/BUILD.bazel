@@ -250,8 +250,7 @@ nuget_package(
     package_id = "Selenium.WebDriver",
     package_version = "{}".format(SE_VERSION),
     visibility = ["//visibility:public"],
-    deps = [
-        ":commitver",    
+    deps = [ 
         ":logo",
         ":net45",
         ":net46",
