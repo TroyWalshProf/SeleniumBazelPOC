@@ -260,8 +260,7 @@ nuget_package(
     package_version = "{}".format(SE_VERSION),
     visibility = ["//visibility:public"],
     deps = [ 
-        ":commitver",   
-        ":commitver2", 
+        ":commitver",
         ":logo",
         ":net45",
         ":net46",
