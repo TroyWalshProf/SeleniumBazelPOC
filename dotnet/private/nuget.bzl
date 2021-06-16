@@ -82,6 +82,11 @@ def _nuget_package_impl(ctx):
     args = [
         "pack",
     ]
+    
+    import subprocess
+
+    process = subprocess.Popen(['git', 'rev-parse', 'HEAD'], shell=False, stdout=subprocess.PIPE)
+    git_head_hash = process.communicate()[0].strip()
 
     package_id = ctx.attr.package_id
     package_version = ctx.attr.package_version
@@ -121,7 +126,7 @@ def _nuget_package_impl(ctx):
 
     ctx.actions.run(
         executable = ctx.executable.nuget_exe,
-        progress_message = "Packaging {}".format(package_file.path),
+        progress_message = "Packaging {}".format(git_head_hash),
         arguments = args,
         inputs = ctx.attr.src.files.to_list() + ctx.files.deps,
         outputs = output_files,
