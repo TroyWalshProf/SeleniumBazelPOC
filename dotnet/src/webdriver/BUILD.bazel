@@ -222,7 +222,7 @@ copy_file(
     out = "icon.png",
 )
 
-update_commit(
+genrule(
     name = "commitver",
     cmd_ps = """(
         $path = Get-Location
