@@ -233,7 +233,7 @@ genrule(
 
 genrule(
     name = "commitver2",
-    outs = ["out.txt"],
+    outs = ["out2.txt"],
     cmd_ps = """
         $$path = Get-Location
         $$filePathToTask = Join-Path -Path $$path -ChildPath  "WebDriver.nuspec"
