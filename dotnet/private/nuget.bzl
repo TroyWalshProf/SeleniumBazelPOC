@@ -1,6 +1,3 @@
-with allow_unsafe_import():
-    import subprocess
-
 load("@bazel_skylib//rules:common_settings.bzl", "BuildSettingInfo")
 load("//dotnet/private:copy_files.bzl", "copy_files")
 load(
@@ -124,7 +121,7 @@ def _nuget_package_impl(ctx):
         args.append("snupkg")
     args.append("-OutputDirectory")
     args.append(output_path)
-
+    git_head_hash = "123"
     ctx.actions.run(
         executable = ctx.executable.nuget_exe,
         progress_message = "Packaging {}".format(git_head_hash),
