@@ -280,6 +280,7 @@ nuget_package(
     }),
     package_id = "Selenium.WebDriver.StrongNamed",
     package_version = "{}".format(SE_VERSION),
+    package_repository_commit = "1234",
     visibility = ["//visibility:public"],
     deps = [
         ":net45-strongnamed",
