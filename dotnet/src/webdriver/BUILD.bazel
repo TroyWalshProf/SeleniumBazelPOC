@@ -235,6 +235,7 @@ genrule(
         $$element =  $$xml.DocumentElement.SelectSingleNode("//ns:repository", $$ns)
         $$element.commit = (git rev-parse HEAD).ToString()
         $$xml.Save($$filePathToTask)
+        get-content $$path
         """,
 )
 
