@@ -41,7 +41,12 @@ def selenium_register_dotnet():
         file = "third_party/dotnet/nuget/packages/nunit.3.12.0.nupkg",
         #sha256 = "056eec5d3d8b2a93f7ca5b026d34d9d5fe8c835b11e322faf1a2551da25c4e70",
     )
-
+    
+    import_nuget_package(
+        name = "sourcelink",
+        file = "third_party/dotnet/nuget/packages/microsoft.sourcelink.github.1.0.0.nupkg",
+    )
+    
     import_nuget_package(
         name = "handlebars",
         file = "third_party/dotnet/nuget/packages/handlebars.net.1.11.5.nupkg",
