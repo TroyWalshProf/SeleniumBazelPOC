@@ -27,8 +27,21 @@ jobs:
         with:
           ruby-version: 2.5
       #- uses: ./.github/actions/setup-bazelisk
-          
-      - name: Build grid
+      - name: Update commit version
+        run: |
+          $path = "${{ github.workspace }}"
+          $filePathToTask = Join-Path -Path $path -ChildPath  "dotnet/src/webdriver/WebDriver.nuspec"
+          Write-Host $filePathToTask
+          $xml = New-Object XML
+          $xml.Load($filePathToTask)
+          $ns = New-Object System.Xml.XmlNamespaceManager($xml.NameTable)
+          $ns.AddNamespace("ns", $xml.DocumentElement.NamespaceURI)
+          $element =  $xml.DocumentElement.SelectSingleNode("//ns:repository", $ns)
+          $element.commit = (git rev-parse HEAD).ToString()
+          $xml.Save($filePathToTask)
+          Write-Host (git rev-parse HEAD).ToString()
+      
+      - name: Build webdriver
         uses: ./.github/actions/bazel
         with:
           command: build -s //dotnet/src/webdriver:package
