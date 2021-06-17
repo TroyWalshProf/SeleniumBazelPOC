@@ -64,6 +64,7 @@ generated_assembly_info(
     visibility = ["//visibility:public"],
     deps = [
         "@json.net//:Newtonsoft.Json",
+        "@sourcelink//:microsoft.sourcelink.github",
         "@net//:System",
         "@net//:System.Core",
         "@net//:System.Data",
