@@ -192,7 +192,7 @@ generated_assembly_info(
     ],
     visibility = ["//visibility:public"],
     deps = [
-        "@json.net//:Newtonsoft.Json",,
+        "@json.net//:Newtonsoft.Json",
         "@sourcelink//:microsoft.sourcelink.github",
     ],
 ) for standard_version in SUPPORTED_NET_STANDARD_VERSIONS]
@@ -203,7 +203,7 @@ generated_assembly_info(
     target_framework = "{}".format(framework),
     visibility = ["//visibility:public"],
     deps = [
-        "@json.net//:Newtonsoft.Json",,
+        "@json.net//:Newtonsoft.Json",
         "@sourcelink//:microsoft.sourcelink.github",
     ],
 ) for framework in SUPPORTED_NET_FRAMEWORKS]
@@ -215,7 +215,7 @@ generated_assembly_info(
     target_framework = "{}".format(framework),
     visibility = ["//visibility:public"],
     deps = [
-        "@json.net//:Newtonsoft.Json",,
+        "@json.net//:Newtonsoft.Json",
         "@sourcelink//:microsoft.sourcelink.github",
     ],
 ) for framework in SUPPORTED_NET_FRAMEWORKS]
