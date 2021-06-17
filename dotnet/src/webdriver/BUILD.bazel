@@ -64,7 +64,7 @@ generated_assembly_info(
     visibility = ["//visibility:public"],
     deps = [
         "@json.net//:Newtonsoft.Json",
-        "@sourcelink//:microsoft.sourcelink.github",
+        "@sourcelink//:sourcelink",
         "@net//:System",
         "@net//:System.Core",
         "@net//:System.Data",
@@ -147,6 +147,7 @@ generated_assembly_info(
     visibility = ["//visibility:public"],
     deps = [
         "@json.net//:Newtonsoft.Json",
+        "@sourcelink//:sourcelink",
         "@net//:System",
         "@net//:System.Core",
         "@net//:System.Data",
@@ -193,7 +194,7 @@ generated_assembly_info(
     visibility = ["//visibility:public"],
     deps = [
         "@json.net//:Newtonsoft.Json",
-        "@sourcelink//:microsoft.sourcelink.github",
+        "@sourcelink//:sourcelink",
     ],
 ) for standard_version in SUPPORTED_NET_STANDARD_VERSIONS]
 
@@ -204,7 +205,7 @@ generated_assembly_info(
     visibility = ["//visibility:public"],
     deps = [
         "@json.net//:Newtonsoft.Json",
-        "@sourcelink//:microsoft.sourcelink.github",
+        "@sourcelink//:sourcelink",
     ],
 ) for framework in SUPPORTED_NET_FRAMEWORKS]
 
@@ -216,7 +217,7 @@ generated_assembly_info(
     visibility = ["//visibility:public"],
     deps = [
         "@json.net//:Newtonsoft.Json",
-        "@sourcelink//:microsoft.sourcelink.github",
+        "@sourcelink//:sourcelink",
     ],
 ) for framework in SUPPORTED_NET_FRAMEWORKS]
 
