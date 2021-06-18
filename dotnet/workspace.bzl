@@ -35,7 +35,13 @@ def selenium_register_dotnet():
         file = "third_party/dotnet/nuget/packages/benderproxy.1.0.0.nupkg",
         sha256 = "fd536dc97eb71268392173e7c4c0699795a31f6843470134ee068ade1be4b57d",
     )
-
+    
+    import_nuget_package(
+        name = "serilog",
+        file = "third_party/dotnet/nuget/packages/serilog.2.10.0.nupkg",
+        sha256 = "fd536dc97eb71268392173e7c4c0699795a31f6843470134ee068ade1be4b57d",
+    )
+  
     import_nuget_package(
         name = "nunit",
         file = "third_party/dotnet/nuget/packages/nunit.3.12.0.nupkg",
