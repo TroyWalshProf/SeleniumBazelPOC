@@ -39,7 +39,7 @@ def selenium_register_dotnet():
     import_nuget_package(
         name = "serilog",
         file = "third_party/dotnet/nuget/packages/serilog.2.10.0.nupkg",
-        sha256 = "fd536dc97eb71268392173e7c4c0699795a31f6843470134ee068ade1be4b57d",
+        sha256 = "fbcc22964b7e555bd6f8a156b8baf28fb712169cfd0feb33f762985880807121",
     )
   
     import_nuget_package(
