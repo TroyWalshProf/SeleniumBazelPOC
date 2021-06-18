@@ -110,6 +110,7 @@ generated_assembly_info(
     visibility = ["//visibility:public"],
     deps = [
         "@json.net//:Newtonsoft.Json",
+        "@sourcelink//:Microsoft.SourceLink.GitHub",
     ],
 ) for standard_version in SUPPORTED_NET_STANDARD_VERSIONS]
 
