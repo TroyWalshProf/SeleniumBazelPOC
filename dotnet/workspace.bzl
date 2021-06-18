@@ -45,7 +45,7 @@ def selenium_register_dotnet():
     import_nuget_package(
         name = "sourcelink",
         file = "third_party/dotnet/nuget/packages/microsoft.sourcelink.github.1.0.0.nupkg",
-        sha256 = "ed426f8c7989659d800d7dbd1c4da5d05b1f1e70b8d483d4970c118b95ef3109", 
+        sha256 = "fd426f8c7989659d800d7dbd1c4da5d05b1f1e70b8d483d4970c118b95ef3109", 
     )
     
     import_nuget_package(
