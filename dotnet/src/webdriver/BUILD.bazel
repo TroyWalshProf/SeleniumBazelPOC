@@ -64,7 +64,7 @@ generated_assembly_info(
     visibility = ["//visibility:public"],
     deps = [
         "@json.net//:Newtonsoft.Json",
-        "@microsoft.sourcelink.github//:Microsoft.SourceLink.GitHub",
+        "@sourcelink//:Microsoft.SourceLink.GitHub",
         "@net//:System",
         "@net//:System.Core",
         "@net//:System.Data",
@@ -110,7 +110,7 @@ generated_assembly_info(
     visibility = ["//visibility:public"],
     deps = [
         "@json.net//:Newtonsoft.Json",
-        "@microsoft.sourcelink.github//:Microsoft.SourceLink.GitHub",
+        "@sourcelink//:Microsoft.SourceLink.GitHub",
     ],
 ) for standard_version in SUPPORTED_NET_STANDARD_VERSIONS]
 
@@ -148,7 +148,7 @@ generated_assembly_info(
     visibility = ["//visibility:public"],
     deps = [
         "@json.net//:Newtonsoft.Json",
-        "@microsoft.sourcelink.github//:Microsoft.SourceLink.GitHub",
+        "@sourcelink//:Microsoft.SourceLink.GitHub",
         "@net//:System",
         "@net//:System.Core",
         "@net//:System.Data",
@@ -195,7 +195,7 @@ generated_assembly_info(
     visibility = ["//visibility:public"],
     deps = [
         "@json.net//:Newtonsoft.Json",
-        "@microsoft.sourcelink.github//:Microsoft.SourceLink.GitHub",
+        "@sourcelink//:Microsoft.SourceLink.GitHub",
     ],
 ) for standard_version in SUPPORTED_NET_STANDARD_VERSIONS]
 
@@ -206,7 +206,7 @@ generated_assembly_info(
     visibility = ["//visibility:public"],
     deps = [
         "@json.net//:Newtonsoft.Json",
-        "@microsoft.sourcelink.github//:Microsoft.SourceLink.GitHub",
+        "@sourcelink//:Microsoft.SourceLink.GitHub",
     ],
 ) for framework in SUPPORTED_NET_FRAMEWORKS]
 
@@ -218,7 +218,7 @@ generated_assembly_info(
     visibility = ["//visibility:public"],
     deps = [
         "@json.net//:Newtonsoft.Json",
-        "@microsoft.sourcelink.github//:Microsoft.SourceLink.GitHub",
+        "@sourcelink//:Microsoft.SourceLink.GitHub",
     ],
 ) for framework in SUPPORTED_NET_FRAMEWORKS]
 
@@ -271,7 +271,6 @@ nuget_package(
         ":net46",
         ":net47",
         ":net48",
-        ":net5.0",
         ":netstandard2.0",
         ":netstandard2.1",
     ],
@@ -292,7 +291,6 @@ nuget_package(
         ":net46-strongnamed",
         ":net47-strongnamed",
         ":net48-strongnamed",
-        ":net5.0-strongnamed",
         ":netstandard2.0-strongnamed",
         ":netstandard2.1-strongnamed",
     ],
