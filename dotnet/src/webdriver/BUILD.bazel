@@ -291,6 +291,7 @@ nuget_package(
         ":net46-strongnamed",
         ":net47-strongnamed",
         ":net48-strongnamed",
+        ":net5.0-strongnamed",
         ":netstandard2.0-strongnamed",
         ":netstandard2.1-strongnamed",
     ],
