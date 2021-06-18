@@ -206,7 +206,7 @@ generated_assembly_info(
     visibility = ["//visibility:public"],
     deps = [
         "@json.net//:Newtonsoft.Json",
-        "@sourcelink//:Microsoft.SourceLink.GitHub",
+        "@serilog//:Serilog",
     ],
 ) for framework in SUPPORTED_NET_FRAMEWORKS]
 
