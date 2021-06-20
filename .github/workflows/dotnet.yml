@@ -65,3 +65,10 @@ jobs:
           name: nuget
           path: |
             bazel-bin/dotnet/src/webdriver/*.*
+            
+      - uses: actions/upload-artifact@v2
+        name: "Upload bin"
+        with:
+          name: bin
+          path: |
+            bazel-bin/*.*
