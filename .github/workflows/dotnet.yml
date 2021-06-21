@@ -52,6 +52,7 @@ jobs:
         shell: pwsh 
             
       - uses: actions/upload-artifact@v2
+        if: always()
         name: "Upload bin"
         with:
           name: stuff
@@ -59,6 +60,7 @@ jobs:
             bazel-bin/dotnet/src/*.* 
             
       - uses: actions/upload-artifact@v2
+        if: always()
         name: "Upload bin2"
         with:
           name: stuff2
