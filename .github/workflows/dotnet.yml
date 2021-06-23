@@ -71,5 +71,4 @@ jobs:
         with:
           name: bin
           path: |
-            bazel-bin/dotnet/**/*.cs
-            bazel-bin/dotnet/**/*.csproj
+            bazel-bin/dotnet/**/*.*
